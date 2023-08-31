@@ -1,7 +1,15 @@
-import { Outlet } from "react-router-dom";
+import { Sidebar } from 'components/main';
+import { Outlet } from 'react-router-dom';
 
 const AdminLayout = () => {
-  return <Outlet />;
+  return (
+    <>
+      <Sidebar />
+      <main className="p-4 sm:ml-64">
+        <Outlet />
+      </main>
+    </>
+  );
 };
 
 export default AdminLayout;
